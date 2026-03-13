@@ -1,4 +1,4 @@
-# KMJOONGGO Frontend (RE:BORN)
+# RE:BORN Frontend
 
 ### RE:BORN 개요
 
