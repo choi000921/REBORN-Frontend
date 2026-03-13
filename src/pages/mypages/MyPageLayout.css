@@ -1,0 +1,16 @@
+.mypage-layout-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.mypage-content-wrapper {
+    display: flex;
+    max-width: 1200px; /* 메인 페이지와 동일한 중앙 정렬 */
+    width: 100%;
+    margin: 30px auto;
+    flex: 1;
+}
+.mypage-main-content {
+    flex-grow: 1; /* 왼쪽 메뉴를 제외한 모든 공간 차지 */
+    padding-left: 40px; /* 메뉴와의 간격 */
+}

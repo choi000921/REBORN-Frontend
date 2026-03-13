@@ -1,0 +1,78 @@
+/* src/pages/admin/AdminUserDetail.css */
+
+/* (공통) admin-table CSS는 AdminList.css의 것을 재사용합니다. */
+@import './AdminList.css'; 
+
+.admin-detail-title {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.admin-detail-subtitle {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+/* 유저 정보 그리드 (2열) */
+.admin-detail-grid.user-info {
+    display: grid;
+    grid-template-columns: 150px 1fr 150px 1fr; /* 4열 */
+    align-items: center;
+    gap: 1px; 
+    background-color: #e9ecef;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.detail-item {
+    padding: 15px 20px;
+    background-color: white;
+    font-size: 15px;
+}
+.detail-item.label {
+    font-weight: 700;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+/* 비밀번호 셀 */
+.password-cell {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+.password-cell button {
+    padding: 4px 8px;
+    font-size: 12px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* 경고 테이블 */
+.admin-table .comment-cell {
+    text-align: left;
+    max-width: 300px;
+}
+.admin-table .edit-btn,
+.admin-table .delete-btn {
+    padding: 6px 12px;
+    font-size: 13px;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.admin-table .edit-btn {
+    background-color: #007bff;
+    color: white;
+}
+.admin-table .delete-btn {
+    background-color: #dc3545;
+    color: white;
+}

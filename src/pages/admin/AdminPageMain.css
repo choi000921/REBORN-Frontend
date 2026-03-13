@@ -1,0 +1,86 @@
+/* src/pages/admin/AdminPageMain.css */
+
+.admin-page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.admin-content-wrapper {
+    max-width: 1200px;
+    width: 100%;
+    margin: 30px auto;
+    flex: 1;
+    padding: 0 20px;
+}
+
+.admin-content-wrapper h1 {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+/* 1. 탭 스타일 */
+.admin-tabs {
+    display: flex;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 20px;
+}
+.admin-tab {
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: #888;
+    border-bottom: 3px solid transparent;
+}
+.admin-tab.active {
+    color: #E81115; /* 테마 색상 */
+    border-bottom: 3px solid #E81115;
+}
+
+/* 2. 검색 바 스타일 */
+.admin-search-bar {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+}
+.admin-search-select {
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    min-width: 120px;
+}
+.admin-search-input {
+    flex-grow: 1; /* 남은 공간 모두 차지 */
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+.admin-search-button {
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 700;
+    color: white;
+    background-color: #E81115; /* 테마 색상 */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* 3. 검색 결과 영역 */
+.admin-results-area {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px dashed #ddd;
+    border-radius: 8px;
+    min-height: 300px;
+    color: #555;
+}

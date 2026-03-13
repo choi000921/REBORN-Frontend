@@ -1,0 +1,75 @@
+.mypage-sales-container {
+    width: 100%;
+}
+
+/* 필터 바 */
+.sales-filter-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    flex-wrap: wrap; /* 창이 좁아지면 줄바꿈 */
+}
+.sales-search-input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 15px;
+    min-width: 200px;
+}
+.sales-checkboxes {
+    display: flex;
+    gap: 15px;
+    font-size: 14px;
+}
+.sales-sort-buttons {
+    display: flex;
+    gap: 10px;
+}
+.sales-sort-buttons button {
+    background: none;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+    cursor: pointer;
+}
+.sales-sort-buttons button.active {
+    color: #E81115;
+    text-decoration: underline;
+}
+
+/* 테이블 */
+.sales-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+}
+.sales-table th,
+.sales-table td {
+    padding: 15px 10px;
+    border-bottom: 1px solid #f0f0f0;
+    text-align: center;
+    vertical-align: middle;
+}
+.sales-table th {
+    background-color: #f8f9fa;
+    font-weight: 700;
+}
+.sales-table td:first-child {
+    text-align: left;
+    font-weight: 600;
+}
+.detail-link-btn {
+    padding: 6px 12px;
+    background-color: #E81115;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 600;
+}

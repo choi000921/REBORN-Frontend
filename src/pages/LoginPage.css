@@ -1,0 +1,116 @@
+/* src/pages/LoginPage.css */
+
+.login-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; /* 헤더/푸터를 제외한 영역 중앙 */
+    background-color: #f9f9f9; /* (선택) 배경색 */
+}
+
+.login-form-wrapper {
+    width: 100%;
+    max-width: 460px; /* 네이버 로그인 폼과 유사한 너비 */
+    padding: 40px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* 1. 로고 */
+.login-logo {
+    display: block;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 900;
+    color: #E81115; /* 테마 색상 */
+    text-decoration: none;
+    margin-bottom: 30px;
+}
+
+/* 2. 폼 */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.input-group input {
+    font-size: 16px;
+    padding: 14px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+}
+
+.input-group input:focus {
+    border-color: #E81115; /* 클릭 시 테마 색상 */
+    box-shadow: 0 0 0 2px rgba(232, 17, 21, 0.2);
+}
+
+/* 3. 로그인 옵션 */
+.login-options {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #555;
+}
+
+.login-options input[type="checkbox"] {
+    margin-right: 8px;
+    /* (선택) 체크박스 커스텀 */
+}
+
+/* 4. 로그인 버튼 */
+.login-button {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    background-color: #E81115; /* 테마 색상 */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.login-button:hover {
+    background-color: #c90e12; /* 테마 색상의 어두운 버전 */
+}
+
+/* 5. 하단 링크 */
+.login-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    gap: 15px;
+    font-size: 13px;
+}
+
+.login-links a {
+    color: #777;
+    text-decoration: none;
+}
+
+.login-links a:hover {
+    text-decoration: underline;
+}
+
+.login-links .divider {
+    color: #ccc;
+    font-size: 10px;
+}

@@ -1,0 +1,72 @@
+/* src/pages/mypages/MyPageWishlist.css */
+
+.mypage-wishlist-container {
+    width: 100%;
+}
+
+/* 1. 검색/필터 바 */
+.wishlist-filter-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+.wishlist-search-input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 15px;
+    width: 300px;
+}
+.wishlist-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.refresh-btn {
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.refresh-btn:hover {
+    background-color: #f0f0f0;
+}
+
+/* 2. 제품 그리드 (5열) */
+.wishlist-product-grid {
+    display: grid;
+    /* (기획안) 5열 고정 (SearchPage와 동일) */
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 20px;
+}
+
+.no-results {
+    padding: 50px;
+    text-align: center;
+    font-size: 16px;
+    color: #888;
+}
+
+.ai-compare-btn {
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    background-color: #E81115; /* 테마 색상 */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none; /* Link 태그의 밑줄 제거 */
+}
+.ai-compare-btn:hover {
+    background-color: #c90e12;
+}

@@ -1,0 +1,31 @@
+.mypage-menu {
+    width: 200px;
+    flex-shrink: 0; /* 너비 고정 */
+    border-right: 1px solid #f0f0f0;
+    padding-right: 30px;
+}
+.mypage-menu h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+.mypage-menu nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.mypage-menu nav a {
+    font-size: 18px;
+    font-weight: 600;
+    color: #555;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 6px;
+}
+.mypage-menu nav a:hover {
+    background-color: #f8f9fa;
+}
+.mypage-menu nav a.active {
+    background-color: #fdeeee; /* (임시) 테마 색상 연하게 */
+    color: #E81115; /* 테마 색상 (활성화) */
+}

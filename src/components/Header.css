@@ -1,0 +1,204 @@
+/* src/components/Header.css */
+
+.header-container {
+    width: 100%;
+    border-bottom: 1px solid #e9ecef;
+    padding: 15px 0;
+    background-color: white;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* (조정) 사이트의 최대 너비 */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 1. 왼쪽: 로고 */
+.header-left {
+    flex: 1; /* 1:2:1 비율 */
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 900;
+    color: #E81115; /* <-- 수정 (초록색 -> 테마 색상) */
+    text-decoration: none;
+}
+
+/* 2. 중앙: 검색 */
+.header-center {
+    flex: 2; /* 1:2:1 비율 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.search-bar {
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    background-color: #f1f3f5;
+    border-radius: 8px;
+    padding: 10px 15px;
+}
+
+.search-bar input {
+    flex-grow: 1;
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    outline: none; /* 클릭 시 테두리 제거 */
+}
+
+.search-button {
+    border: none;
+    background-color: transparent;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.keyword-section {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* 제목과 검색어 목록 사이의 간격 */
+    width: 100%;
+    max-width: 600px; /* 검색창 너비와 동일하게 */
+    margin-top: 10px;
+}
+
+/* (신규) "인기 검색어" 텍스트 스타일 */
+.keyword-title {
+    font-size: 13px;
+    font-weight: 700; /* bold */
+    color: #333;
+    white-space: nowrap; /* 줄바꿈 방지 */
+}
+
+.top-categories {
+    /* (수정) margin-top 제거, flex-grow 추가 */
+    /* margin-top: 10px; */ /* <-- 제거 */
+    font-size: 13px;
+    display: flex;
+    gap: 15px;
+    flex-grow: 1; /* (추가) 남은 공간을 채움 */
+    overflow-x: auto; /* (추가) 검색어가 많으면 스크롤 */
+    white-space: nowrap;
+    
+    /* (추가) 스크롤바 숨기기 (선택 사항) */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.top-categories::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+}
+
+.category-item {
+    color: #495057;
+    text-decoration: none;
+    white-space: nowrap; /* 줄바꿈 방지 */
+}
+.category-item:hover {
+    text-decoration: underline;
+}
+
+/* 3. 오른쪽: 메뉴 */
+.header-right {
+    flex: 1; /* (유지) 오른쪽 영역 비율은 그대로 */
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+    text-decoration: none;
+    padding: 8px 12px;
+    white-space: nowrap;
+}
+
+.nav-button:hover {
+    background-color: #f8f9fa;
+    border-radius: 6px;
+}
+
+/* 특별한 버튼 스타일 */
+.sell-button {
+    background-color: #E81115; /* <-- 수정 (주황색 -> 테마 색상) */
+    color: white;
+    border-radius: 6px;
+}
+.sell-button:hover {
+    background-color: #c90e12; /* (수정) 테마 색상의 어두운 버전 */
+}
+s
+.login-button {
+    background-color: #E81115; /* <-- 수정 (초록색 -> 테마 색상) */
+    color: white;
+    border-radius: 6px;
+}
+.login-button:hover {
+    background-color: #c90e12; /* (수정) 테마 색상의 어두운 버전 */
+}
+
+.nav-dropdown {
+    position: relative; /* (중요) 드롭다운 메뉴의 기준점 */
+    display: inline-block;
+}
+
+/* 드롭다운 메뉴 (숨겨진 박스) */
+.dropdown-menu {
+    position: absolute;
+    top: 110%; /* 버튼 바로 아래 */
+    
+    /* (여기 수정) 'right: 0' 대신 아래 2줄로 변경 */
+    left: 50%;
+    transform: translateX(-50%);
+    
+    background-color: white;
+    min-width: 140px; /* 최소 너비 */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 5px 0;
+}
+
+/* 드롭다운 메뉴 안의 아이템 (Link 또는 button) */
+/* src/components/Header.css */
+
+/* 드롭다운 메뉴 안의 아이템 (Link 또는 button) */
+.dropdown-item {
+    display: block;
+    width:100%;
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    /* (여기 수정) 'text-align: left'를 'center'로 변경 */
+    text-align: center;
+    
+    white-space: nowrap; /* 줄바꿈 방지 */
+    box-sizing: border-box;
+    
+    /* (추가 2) button 태그가 기본 margin/padding을 갖지 않도록 합니다. */
+    margin: 0;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa; /* 마우스 오버 효과 */
+}

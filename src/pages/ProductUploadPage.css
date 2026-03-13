@@ -1,0 +1,262 @@
+/* src/pages/ProductUploadPage.css */
+
+.product-upload-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+}
+
+.upload-container {
+    /* (규칙) 왼쪽 정렬, 오른쪽 여백 */
+    max-width: 800px;
+    margin: 30px auto; /* 0 auto 아님 */
+    padding: 20px 40px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.upload-form h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #eee;
+}
+
+/* 폼 그룹 공통 */
+.form-group {
+    margin-bottom: 25px;
+}
+.form-group label {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.form-group label span {
+    color: #E81115; /* 테마 색상 */
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+/* 폼 입력칸 공통 */
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 14px;
+    font-size: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box; /* 패딩 포함 100% */
+}
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #E81115;
+    box-shadow: 0 0 0 2px rgba(232, 17, 21, 0.2);
+    outline: none;
+}
+
+/* 폼 그룹 개별 */
+.form-group textarea {
+    resize: vertical; /* 세로로만 크기 조절 */
+    min-height: 120px;
+}
+
+.form-group.product-name-group {
+    position: relative;
+    /* (참고) 라벨이 버튼과 겹치지 않도록 상단 패딩 확보 */
+    padding-top: 30px; 
+}
+
+
+
+.ai-analyze-btn {
+    position: absolute;
+    top: 0; /* 기준점(.product-name-group)의 맨 위 */
+    right: 0; /* 기준점의 맨 오른쪽 */
+
+    /* (기존 버튼 스타일) */
+    padding: 6px 12px;
+    font-size: 13px;
+    font-weight: 600;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.ai-analyze-btn:hover {
+    background-color: #0056b3;
+}
+
+.ai-analyze-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* (규칙) 이미지 드래그앤드롭 */
+.dropzone {
+    border: 2px dashed #ddd;
+    border-radius: 6px;
+    padding: 30px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #f8f9fa;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+.dropzone:hover {
+    background-color: #f1f3f5;
+    border-color: #E81115;
+}
+.dropzone p {
+    margin: 0;
+    font-size: 16px;
+    color: #555;
+}
+.dropzone.checking {
+    background-color: #e9ecef;
+    border-color: #adb5bd;
+    cursor: wait;
+}
+.dropzone.checking p {
+    color: #495057;
+}
+
+/* 이미지 미리보기 */
+.image-preview-list {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+.image-preview-item {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+    flex-shrink: 0; /* 줄바꿈 시 크기 유지 */
+}
+.image-preview-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.image-preview-item .remove-btn {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 20px;
+    display: flex; /* 텍스트 중앙 정렬 */
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+.image-check-tag {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 3px 6px;
+    font-size: 10px;
+    color: white;
+    border-top-right-radius: 4px;
+    font-weight: 600;
+    z-index: 5;
+}
+.image-check-tag.risk-low {
+    background-color: #28a745; /* Green */
+}
+.image-check-tag.risk-medium {
+    background-color: #ffc107; /* Yellow */
+}
+.image-check-tag.risk-high {
+    background-color: #dc3545; /* Red */
+}
+.image-check-tag.risk-error {
+    background-color: #6c757d; /* Gray */
+}
+
+/* 이미지 검사 중 드롭존 스타일 */
+.dropzone.checking {
+    background-color: #e9ecef;
+    border-color: #adb5bd;
+    cursor: wait;
+}
+.dropzone.checking p {
+    color: #495057;
+}
+
+/* (추가) 3개의 select 박스를 감싸는 div에 대한 스타일 */
+.location-selects {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 3열 그리드 */
+    gap: 15px;
+}
+
+/* 등록/초기화 버튼 */
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 2px solid #eee;
+}
+.form-actions button {
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.form-actions .reset-btn {
+    background-color: #868e96;
+    color: white;
+}
+.form-actions .submit-btn {
+    background-color: #E81115; /* 테마 색상 */
+    color: white;
+}
+.form-actions button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+.form-group label[for="productName"],
+.form-group label[for="productDescription"] {
+    text-align: center;
+}
+
+.form-group-header {
+  display: flex;
+  justify-content: space-between; /* 왼쪽 라벨 / 오른쪽 버튼 */
+  align-items: center;
+  margin-bottom: 8px; /* 아래 드롭존과 간격 */
+}
+
+.form-group-header label {
+  display: flex;
+  align-items: center;
+  gap: 4px; /* "이미지" 텍스트와 (필수) 사이 간격 */
+  margin: 0; /* 혹시 기본 margin 있으면 제거 */
+}
+
+.form-group-header label span {
+  font-size: 0.9rem;
+  color: #ff6b6b; /* (필수) 강조 색, 프로젝트 톤에 맞춰 조정 가능 */
+}

@@ -1,0 +1,66 @@
+/* src/components/SearchProductCard.css */
+.search-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background-color: white;
+    overflow: hidden; /* 이미지 모서리 둥글게 */
+}
+.search-card-link-wrapper {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1; 
+    background-color: #f8f9fa;
+    text-decoration: none; /* Link 태그용 */
+    color: inherit; /* Link 태그용 */
+}
+.search-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.search-card-info {
+    padding: 15px;
+}
+.search-card-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #222;
+    /* (참고) 2줄 말줄임 */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2; /* (경고 해결) */
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+    height: 48px; 
+}
+.search-card-price {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 8px 0;
+}
+.search-card-meta {
+    display: flex;
+    font-size: 13px;
+    color: #888;
+    gap: 5px;
+}
+.search-card-meta .divider {
+    color: #ddd;
+}
+.search-card-delete-btn {
+    margin-top: 10px;
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #E81115; /* 테마 색상 */
+    background-color: #fdeeee; /* 테마 색상 연하게 */
+    border: 1px solid #f5c6cb;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.search-card-delete-btn:hover {
+    background-color: #f8d7da;
+}

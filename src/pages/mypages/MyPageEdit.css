@@ -1,0 +1,104 @@
+/* src/pages/mypages/MyPageEdit.css */
+
+.mypage-edit-container {
+    width: 100%;
+}
+
+.mypage-title {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 20px;
+}
+
+.edit-form {
+    max-width: 600px; /* 폼 너비 */
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 140px 1fr; /* 라벨 140px, 입력칸 나머지 */
+    align-items: center;
+    gap: 15px;
+}
+
+.form-row label {
+    font-size: 15px;
+    font-weight: 600;
+    text-align: right;
+    color: #333;
+}
+
+/* 입력칸 공통 스타일 */
+.form-row input[type="text"],
+.form-row input[type="password"],
+.form-row input[type="tel"],
+.form-row input[type="email"],
+.form-row select {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.form-row input:focus,
+.form-row select:focus {
+    border-color: #E81115;
+    box-shadow: 0 0 0 2px rgba(232, 17, 21, 0.2);
+    outline: none;
+}
+
+/* 수정 불가 항목 스타일 */
+.form-row.readonly span {
+    font-size: 15px;
+    padding: 12px;
+    color: #777;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+}
+
+/* 위치 선택 */
+.form-row.location {
+    align-items: flex-start; /* 라벨을 위로 */
+}
+.form-row.location .location-selects {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+/* 버튼 */
+.form-actions {
+    grid-column: 1 / -1; /* 그리드 전체 차지 */
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.form-actions button {
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.form-actions .reset-btn {
+    background-color: #868e96;
+    color: white;
+}
+
+.form-actions .submit-btn {
+    background-color: #E81115; /* 테마 색상 */
+    color: white;
+}

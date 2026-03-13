@@ -1,0 +1,113 @@
+/* src/pages/FindPage.css */
+
+.find-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background-color: #f9f9f9;
+}
+
+.find-form-wrapper {
+    width: 100%;
+    max-width: 460px;
+    padding: 40px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* 로고 */
+.find-logo {
+    display: block;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 900;
+    color: #E81115; /* 테마 색상 */
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+/* 페이지 제목 */
+.find-title {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* 폼 */
+.find-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.input-group input {
+    font-size: 16px;
+    padding: 14px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+}
+
+.input-group input:focus {
+    border-color: #E81115;
+    box-shadow: 0 0 0 2px rgba(232, 17, 21, 0.2);
+}
+
+/* 버튼 */
+.find-button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px; /* 입력칸과 버튼 사이 간격 */
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    background-color: #E81115; /* 테마 색상 */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.find-button:hover {
+    background-color: #c90e12;
+}
+
+/* 하단 링크 */
+.find-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    gap: 15px;
+    font-size: 13px;
+}
+
+.find-links a {
+    color: #777;
+    text-decoration: none;
+}
+
+.find-links a:hover {
+    text-decoration: underline;
+}
+
+.find-links .divider {
+    color: #ccc;
+    font-size: 10px;
+}

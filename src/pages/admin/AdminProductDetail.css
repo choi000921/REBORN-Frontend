@@ -1,0 +1,127 @@
+/* src/pages/admin/AdminProductDetail.css */
+
+/* (공통) admin-table CSS는 AdminList.css의 것을 재사용합니다. */
+@import './AdminList.css'; 
+
+.admin-detail-title {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.admin-detail-subtitle {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* 공통 그리드 (UserInfo와 유사) */
+.admin-detail-grid {
+    display: grid;
+    gap: 1px; 
+    background-color: #e9ecef;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.detail-item {
+    padding: 15px 20px;
+    background-color: white;
+    font-size: 15px;
+}
+.detail-item.label {
+    font-weight: 700;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+/* 4열 그리드 (상품 정보) */
+.admin-detail-grid.product-info {
+    grid-template-columns: 150px 1fr 150px 1fr;
+    align-items: center;
+}
+
+/* 3열 그리드 (위치, 이미지) */
+.admin-detail-grid.product-location {
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+}
+.admin-detail-grid.product-images {
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 10px;
+    background-color: white;
+    gap: 10px;
+}
+.image-box {
+    width: 100%;
+    height: 250px;
+    background-color: #f8f9fa;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 텍스트 박스 (설명) */
+.admin-detail-box.description {
+    padding: 20px;
+    background-color: #fdfdfd;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    min-height: 100px;
+    font-size: 15px;
+    line-height: 1.6;
+    white-space: pre-wrap; /* \n 줄바꿈 적용 */
+}
+
+/* 관리자 액션 바 */
+.admin-actions-bar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+.action-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.action-group label {
+    font-size: 13px;
+    font-weight: 600;
+}
+.action-group select {
+    padding: 8px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+.action-btn {
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 700;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.save-btn {
+    background-color: #007bff;
+    color: white;
+}
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+    margin-left: auto; /* (중요) 삭제 버튼을 오른쪽 끝으로 밀기 */
+}

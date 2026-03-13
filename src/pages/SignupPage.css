@@ -1,0 +1,135 @@
+/* src/pages/SignupPage.css */
+
+.signup-page-container {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0; /* 폼이 길어질 수 있으므로 상하 패딩 */
+    background-color: #f9f9f9;
+}
+
+.signup-form-wrapper {
+    width: 100%;
+    max-width: 500px; /* 폼이 기므로 조금 더 넓게 */
+    padding: 40px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* 로고 */
+.signup-logo {
+    display: block;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 900;
+    color: #E81115; /* 테마 색상 */
+    text-decoration: none;
+    margin-bottom: 30px;
+}
+
+/* 폼 */
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* 간격 */
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+/* 모든 input과 select에 공통 스타일 적용 */
+.input-group input,
+.input-group select {
+    font-size: 16px;
+    padding: 14px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+    -webkit-appearance: none; /* (iOS) 기본 스타일 제거 */
+    -moz-appearance: none;
+    appearance: none;
+}
+.input-group select {
+    background: url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 12px center;
+    background-size: 20px;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    border-color: #E81115;
+    box-shadow: 0 0 0 2px rgba(232, 17, 21, 0.2);
+}
+
+/* 이메일 인증 그룹 */
+.email-group {
+    position: relative;
+}
+.email-group input {
+    padding-right: 100px; /* 버튼이 들어갈 공간 확보 */
+}
+.email-group .auth-button {
+    position: absolute;
+    right: 5px;
+    top: 35px; /* (조정) label 높이 고려 */
+    height: 40px;
+    padding: 0 10px;
+    border: none;
+    background-color: #eee;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.email-group .auth-button:hover {
+    background-color: #ddd;
+}
+
+
+/* 가입하기 버튼 */
+.signup-button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    background-color: #E81115; /* 테마 색상 */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.signup-button:hover {
+    background-color: #c90e12;
+}
+
+/* 하단 링크 */
+.signup-links {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 14px;
+    color: #777;
+}
+.signup-links a {
+    color: #E81115;
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 10px;
+}
+.signup-links a:hover {
+    text-decoration: underline;
+}
+
+.location-selects {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 3열 그리드 */
+    gap: 15px;
+}
